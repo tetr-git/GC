@@ -8,7 +8,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerScript.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -67,7 +67,8 @@
       <option name="presentableId" value="Default" />
       <updated>1669809888093</updated>
       <workItem from="1669809902025" duration="2127000" />
-      <workItem from="1669812096581" duration="1615000" />
+      <workItem from="1669812096581" duration="1992000" />
+      <workItem from="1669815331234" duration="1983000" />
     </task>
     <servers />
   </component>
