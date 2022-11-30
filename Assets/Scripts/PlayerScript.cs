@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float degreesPerSecond = 2.0f;
+    public float speed = 5.0f;
+    public float rotationSpeed = 0.2f;
+    public float playerAngle = 0;
+    void FixedUpdate()
     {
+        float moveForward = Input.GetAxis("Vertical") * speed * Time.deltaTime;
+        float moveSideways = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        transform.Translate(0, 0, moveForward);
+        transform.Translate(moveSideways,0,0);
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (Input.GetKey(KeyCode.Q))
+        { 
+            playerAngle -= rotationSpeed;
+        }
+        else if (Input.GetKey(KeyCode.E))
+        {
+            playerAngle += rotationSpeed;
+        }
+        Vector3 targetDirection = new Vector3(Mathf.Sin(playerAngle), 0, Mathf.Cos(playerAngle));
+        transform.rotation = Quaternion.LookRotation(targetDirection);
     }
 }

@@ -41,8 +41,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\FollowCameraScript.cs" />
      <Compile Include="Assets\Scripts\PlayerScript.cs" />
      <Folder Include="Assets" />
+     <Folder Include="Assets\Materials" />
      <Folder Include="Assets\Scripts" />
      <Folder Include="Assets\Scenes" />
      <Reference Include="UnityEngine">
