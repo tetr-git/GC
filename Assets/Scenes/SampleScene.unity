@@ -254,6 +254,8 @@ MonoBehaviour:
   speed: 5
   rotationSpeed: 0.1
   playerAngle: 0
+  jump: {x: 0, y: 0, z: 0}
+  jumpForce: 0.2
 --- !u!1 &625909885
 GameObject:
   m_ObjectHideFlags: 0
