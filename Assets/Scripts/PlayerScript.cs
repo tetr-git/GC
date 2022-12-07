@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,11 @@ public class PlayerScript : MonoBehaviour
     public float playerAngle = 0;
     public Vector3 jump;
     public float jumpForce = 2.0f;
+
+    public String vertical = "VerticalPlayerOne";
+    public String horizontal = "HorizontalPlayerOne";
+    public KeyCode viewMin = KeyCode.Q;
+    public KeyCode viewPlus = KeyCode.E;
     
     Rigidbody _rb;
     void Start(){
@@ -18,16 +24,16 @@ public class PlayerScript : MonoBehaviour
     }
     void FixedUpdate()
     {
-        float moveForward = Input.GetAxis("Vertical") * speed * Time.deltaTime;
-        float moveSideways = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        transform.Translate(0, 0, moveForward);
+        float moveForward = Input.GetAxis(vertical) * speed * Time.deltaTime;
+        float moveSideways = Input.GetAxis(horizontal) * speed * Time.deltaTime;
+        transform.Translate(0, 0, moveForward); 
         transform.Translate(moveSideways,0,0);
         
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(viewMin))
         { 
             playerAngle -= rotationSpeed;
         }
-        else if (Input.GetKey(KeyCode.E))
+        else if (Input.GetKey(viewPlus))
         {
             playerAngle += rotationSpeed;
         }
