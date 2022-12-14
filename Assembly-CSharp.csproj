@@ -46,7 +46,11 @@
      <Folder Include="Assets" />
      <Folder Include="Assets\Materials" />
      <Folder Include="Assets\Scripts" />
+     <Folder Include="Assets\Chess Set" />
+     <None Include="Assets\Chess Set\readme.txt" />
+     <Folder Include="Assets\Chess Set\fbx" />
      <Folder Include="Assets\Scenes" />
+     <Folder Include="Assets\Chess Set\fbx\Materials" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.14f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
