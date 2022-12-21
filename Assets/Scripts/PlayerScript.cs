@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -16,9 +17,14 @@ public class PlayerScript : MonoBehaviour
     public KeyCode viewMinKey = KeyCode.Q;
     public KeyCode viewPlusKey = KeyCode.E;
     public KeyCode jumpKey = KeyCode.LeftShift;
+    public Button JumpKeyButton;
     public Vector3 startPosition = new Vector3(26.0f, 10.0f, 26.0f);
+    
     private Rigidbody _rb;
     private Vector3 _respawnPosition;
+    private Boolean _OnGround = false;
+    private Boolean _jumpCondition;
+    private float charger;
    
     void Start(){
         _rb = GetComponent<Rigidbody>();
@@ -42,17 +48,54 @@ public class PlayerScript : MonoBehaviour
         }
         Vector3 targetDirection = new Vector3(Mathf.Sin(playerAngle), 0, Mathf.Cos(playerAngle));
         transform.rotation = Quaternion.LookRotation(targetDirection);
-        if (Input.GetKey(jumpKey))
-        {
-            _rb.AddForce(jump * jumpForce, ForceMode.Impulse);
-        }
 
-        //on release addfore jumpforce and null jumpforce
-        //on press add to jumpforce
+        if (_jumpCondition)
+        {
+            //rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            jumpForce = charger * 8;
+            _rb.AddForce(jump * jumpForce, ForceMode.Impulse);
+            jump = Vector3.up;
+            Debug.Log("up");
+            _jumpCondition = false;
+            charger = 0f;
+        }
 
         if (transform.position.y<-2)
         {
             transform.position = _respawnPosition;
         }
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyUp(jumpKey) && _OnGround)
+        {
+            _jumpCondition = true;
+        }
+
+        if (Input.GetKey(jumpKey) && _OnGround)
+        {
+            //jump += (Vector3.up);
+            if (charger < 2f)
+            {
+                charger += Time.deltaTime;
+            }
+            Debug.Log(charger);
+        }
+    }
+
+    void OnCollisionEnter(Collision collision) {
+        if( collision.gameObject.tag.Equals("world") == true ){
+            Debug.Log(collision);
+            _OnGround = true;
+        }
+    }
+    
+    void OnCollisionExit(Collision collision) {
+        if( collision.gameObject.tag.Equals("world") == true ){
+            Debug.Log(collision);
+            _OnGround = false;
+        }
+    }
+    
 }
