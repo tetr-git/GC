@@ -41,6 +41,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\MazeGenerator.cs" />
+     <Compile Include="Assets\Scripts\MazeRenderer.cs" />
      <Compile Include="Assets\Scripts\FollowCameraScript.cs" />
      <Compile Include="Assets\Scripts\PlayerScript.cs" />
      <Folder Include="Assets" />
