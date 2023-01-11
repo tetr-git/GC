@@ -44,6 +44,7 @@
      <Compile Include="Assets\Scripts\FollowCameraScript.cs" />
      <Compile Include="Assets\Scripts\PlayerScript.cs" />
      <Folder Include="Assets" />
+     <Folder Include="Assets\Prefabs" />
      <Folder Include="Assets\Materials" />
      <Folder Include="Assets\Scripts" />
      <Folder Include="Assets\Chess Set" />
