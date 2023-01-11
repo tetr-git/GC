@@ -45,6 +45,7 @@
      <Compile Include="Assets\Scripts\MazeRenderer.cs" />
      <Compile Include="Assets\Scripts\FollowCameraScript.cs" />
      <Compile Include="Assets\Scripts\PlayerScript.cs" />
+     <Compile Include="Assets\Scripts\gameLogic.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Prefabs" />
      <Folder Include="Assets\Materials" />

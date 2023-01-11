@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638052297939236074
-    m_Hash: 766427405
+      ticks: 638090424560917763
+    m_Hash: 1650708056
   m_LockFileStatus:
     m_FilePath: C:/Users/tetr/GC_1/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638052298772996887
-    m_Hash: 480106862
+      ticks: 638090424560927752
+    m_Hash: 618607993
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:

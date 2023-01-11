@@ -86,14 +86,12 @@ public class PlayerScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision) {
         if( collision.gameObject.tag.Equals("world") == true ){
-            Debug.Log(collision);
             _OnGround = true;
         }
     }
     
     void OnCollisionExit(Collision collision) {
         if( collision.gameObject.tag.Equals("world") == true ){
-            Debug.Log(collision);
             _OnGround = false;
         }
     }
