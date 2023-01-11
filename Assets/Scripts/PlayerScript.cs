@@ -76,7 +76,7 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKey(jumpKey) && _OnGround)
         {
             //jump += (Vector3.up);
-            if (charger < 2f)
+            if (charger < 0.75f)
             {
                 charger += Time.deltaTime;
             }
