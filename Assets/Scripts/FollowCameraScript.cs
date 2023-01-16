@@ -11,7 +11,8 @@ public class FollowCameraScript : MonoBehaviour
 
     void Update()
     {   
-        _offset = new Vector3(0, 1f, -5f);
+        //        _offset = new Vector3(0, 1f, -5f);
+        _offset = new Vector3(0, 0.3f, -1f);
         _player = player.GetComponent<PlayerScript>();
         Vector3 targetDirection = new Vector3(Mathf.Sin(_player.playerAngle), 0, Mathf.Cos(_player.playerAngle));
         Quaternion playerRotation = Quaternion.LookRotation(targetDirection);

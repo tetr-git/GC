@@ -76,7 +76,7 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKey(jumpKey) && _OnGround)
         {
             //jump += (Vector3.up);
-            if (charger < 2f)
+            if (charger < 0.75f)
             {
                 charger += Time.deltaTime;
             }
@@ -86,14 +86,12 @@ public class PlayerScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision) {
         if( collision.gameObject.tag.Equals("world") == true ){
-            Debug.Log(collision);
             _OnGround = true;
         }
     }
     
     void OnCollisionExit(Collision collision) {
         if( collision.gameObject.tag.Equals("world") == true ){
-            Debug.Log(collision);
             _OnGround = false;
         }
     }
