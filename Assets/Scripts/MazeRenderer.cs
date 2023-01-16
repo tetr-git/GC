@@ -40,7 +40,7 @@ public class MazeRenderer : MonoBehaviour
             for (int j = 0; j < height; ++j)
             {
                 var cell = maze[i, j];
-                var position = new Vector3(-width / 2 + i, 0, -height / 2 + j);
+                var position = new Vector3(-width / 2 + i, -0.25f, -height / 2 + j);
 
                 if (cell.HasFlag(WallState.UP))
                 {
