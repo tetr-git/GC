@@ -22,9 +22,9 @@ public class PlayerScript : MonoBehaviour
     
     private Rigidbody _rb;
     private Vector3 _respawnPosition;
-    private Boolean _OnGround = false;
+    private Boolean _onGround = false;
     private Boolean _jumpCondition;
-    private float charger;
+    private float _charger;
    
     void Start(){
         _rb = GetComponent<Rigidbody>();
@@ -37,6 +37,11 @@ public class PlayerScript : MonoBehaviour
         float moveSideways = Input.GetAxis(horizontal) * speed * Time.deltaTime;
         transform.Translate(0, 0, moveForward); 
         transform.Translate(moveSideways,0,0);
+
+        if (Input.GetAxis(vertical) == 0 && Input.GetAxis(horizontal) == 0)
+        {
+            transform.Translate(0,0,0);
+        }
         
         if (Input.GetKey(viewMinKey))
         { 
@@ -52,12 +57,12 @@ public class PlayerScript : MonoBehaviour
         if (_jumpCondition)
         {
             //rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            jumpForce = charger * 8;
+            jumpForce = _charger * 8;
             _rb.AddForce(jump * jumpForce, ForceMode.Impulse);
             jump = Vector3.up;
             Debug.Log("up");
             _jumpCondition = false;
-            charger = 0f;
+            _charger = 0f;
         }
 
         if (transform.position.y<-2)
@@ -68,31 +73,30 @@ public class PlayerScript : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(jumpKey) && _OnGround)
+        if (Input.GetKeyUp(jumpKey) && _onGround)
         {
             _jumpCondition = true;
         }
 
-        if (Input.GetKey(jumpKey) && _OnGround)
+        if (Input.GetKey(jumpKey) && _onGround)
         {
-            //jump += (Vector3.up);
-            if (charger < 0.75f)
+            if (_charger < 0.75f)
             {
-                charger += Time.deltaTime;
+                _charger += Time.deltaTime;
             }
-            Debug.Log(charger);
+            Debug.Log(_charger);
         }
     }
 
     void OnCollisionEnter(Collision collision) {
         if( collision.gameObject.tag.Equals("world") == true ){
-            _OnGround = true;
+            _onGround = true;
         }
     }
     
     void OnCollisionExit(Collision collision) {
         if( collision.gameObject.tag.Equals("world") == true ){
-            _OnGround = false;
+            _onGround = false;
         }
     }
     

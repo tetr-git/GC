@@ -10,7 +10,6 @@ public class MenuManager : MonoBehaviour
     public GameObject menu;
     private bool _paused = true;
 
-    // Start is called before the first frame update
     void Start()
     {
         menu.SetActive(true);
