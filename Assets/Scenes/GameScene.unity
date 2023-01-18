@@ -257,7 +257,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 151676730}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!1 &198040585
+=======
+--- !u!1 &307969619
+>>>>>>> master
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -265,6 +269,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 198040586}
   - component: {fileID: 198040590}
   - component: {fileID: 198040589}
@@ -273,16 +278,32 @@ GameObject:
   m_Layer: 5
   m_Name: Crosshair
   m_TagString: player1
+=======
+  - component: {fileID: 307969620}
+  - component: {fileID: 307969623}
+  - component: {fileID: 307969622}
+  - component: {fileID: 307969621}
+  - component: {fileID: 307969624}
+  m_Layer: 0
+  m_Name: Weapon
+  m_TagString: Untagged
+>>>>>>> master
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!224 &198040586
 RectTransform:
+=======
+--- !u!4 &307969620
+Transform:
+>>>>>>> master
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 198040585}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -300,10 +321,24 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &198040587
 MonoBehaviour:
+=======
+  m_GameObject: {fileID: 307969619}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 386426344}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!136 &307969621
+CapsuleCollider:
+>>>>>>> master
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 198040585}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -315,10 +350,23 @@ MonoBehaviour:
   OffsetY: 0.1
 --- !u!114 &198040588
 MonoBehaviour:
+=======
+  m_GameObject: {fileID: 307969619}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &307969622
+MeshRenderer:
+>>>>>>> master
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 198040585}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -332,10 +380,51 @@ MonoBehaviour:
     m_Bits: 4294967295
 --- !u!114 &198040589
 MonoBehaviour:
+=======
+  m_GameObject: {fileID: 307969619}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &307969623
+MeshFilter:
+>>>>>>> master
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 198040585}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -355,10 +444,17 @@ MonoBehaviour:
   m_PresetInfoIsWorld: 1
 --- !u!223 &198040590
 Canvas:
+=======
+  m_GameObject: {fileID: 307969619}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &307969624
+MonoBehaviour:
+>>>>>>> master
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 198040585}
   m_Enabled: 1
   serializedVersion: 3
@@ -374,6 +470,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+=======
+  m_GameObject: {fileID: 307969619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef11306c816fdf44bced00674f51454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootingKey: 99
+  bullet: {fileID: 2268630482822534127, guid: 2a30c8d22fdf7fa4d8d8fa5578c516c2, type: 3}
+  shootspace: 0.2
+  shootintensity: 90
+>>>>>>> master
 --- !u!1 &346203911
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,6 +611,7 @@ GameObject:
   - component: {fileID: 386426341}
   - component: {fileID: 386426345}
   - component: {fileID: 386426346}
+  - component: {fileID: 386426347}
   m_Layer: 0
   m_Name: PlayerOne
   m_TagString: player1
@@ -584,7 +693,8 @@ Transform:
   m_LocalPosition: {x: 9, y: 4, z: 9}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 307969620}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 135, z: 0}
@@ -627,7 +737,27 @@ MonoBehaviour:
   viewMinKey: 113
   viewPlusKey: 101
   jumpKey: 304
+<<<<<<< HEAD
   startPosition: {x: 9, y: 11, z: 9}
+=======
+  startPosition: {x: 27, y: 11, z: 27}
+--- !u!114 &386426347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386426340}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef11306c816fdf44bced00674f51454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootingKey: 99
+  bullet: {fileID: 2268630482822534127, guid: 2a30c8d22fdf7fa4d8d8fa5578c516c2, type: 3}
+  shootspace: 0.2
+  shootintensity: 90
+>>>>>>> master
 --- !u!1 &413377960
 GameObject:
   m_ObjectHideFlags: 0
@@ -2566,8 +2696,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 039a43fc922844848880cb9b58612829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textPlayer1: {fileID: 1387253927}
-  textPlayer2: {fileID: 1664590420}
 --- !u!1 &1822570746
 GameObject:
   m_ObjectHideFlags: 0
