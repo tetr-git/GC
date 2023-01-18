@@ -43,7 +43,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\MazeGenerator.cs" />
      <Compile Include="Assets\Scripts\MazeRenderer.cs" />
-     <Compile Include="Assets\Scripts\gameLogic.cs" />
+     <Compile Include="Assets\Scripts\GameLogic.cs" />
      <Compile Include="Assets\Scripts\FollowCameraScript.cs" />
      <Compile Include="Assets\Scripts\ShootController.cs" />
      <Compile Include="Assets\Scripts\DepracMenuManager.cs" />

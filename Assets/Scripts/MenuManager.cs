@@ -8,12 +8,17 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     public GameObject menu;
+    public GameObject menuButton;
+    public GameObject startButton;
+    public GameObject quitButton;
+    public GameObject restartButton;
     private bool _paused = true;
 
     void Start()
     {
         menu.SetActive(true);
         Time.timeScale = 0;
+        restartButton.SetActive(false);
     }   
 
     public void ClickStartButton()
@@ -38,8 +43,18 @@ public class MenuManager : MonoBehaviour
         _paused = false;
     }
     
-    public void OnWin(Boolean winner)
+    public void ClickQuitButton()
     {
-        Debug.Log(winner);
+        Application.Quit();
+    }
+    
+    public void OnWin()
+    {
+        Time.timeScale = 0;
+        menu.SetActive(true);
+        restartButton.SetActive(true);
+        //deactivate all buttons except restart
+        startButton.SetActive(false);
+        menuButton.SetActive(false);
     }
 }

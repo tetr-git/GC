@@ -28,7 +28,7 @@ public class PlayerScript : MonoBehaviour
    
     void Start(){
         _rb = GetComponent<Rigidbody>();
-        jump = new Vector3(0.0f, 2.0f, 0.0f);
+        jump = new Vector3(0.0f, 1.0f, 0.0f);
         _respawnPosition = startPosition;
     }
     void FixedUpdate()
@@ -57,7 +57,7 @@ public class PlayerScript : MonoBehaviour
         if (_jumpCondition)
         {
             //rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            jumpForce = _charger * 8;
+            jumpForce = _charger * 5.5f;
             _rb.AddForce(jump * jumpForce, ForceMode.Impulse);
             jump = Vector3.up;
             Debug.Log("up");

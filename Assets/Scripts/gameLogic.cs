@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class GameLogic : MonoBehaviour
 {
-    private MenuManager _menuManager;
+    public MenuManager menuManager;
+    private MenuManager _menuManagerInstance;
     private int player1 = 0;
     private int player2 = 0;
     public TextMeshProUGUI textPlayer1;
     public TextMeshProUGUI textPlayer2;
+    public TextMeshProUGUI textWinner;
 
     void OnCollisionEnter(Collision collision) {
         if( collision.gameObject.tag.Equals("player1") == true ){
@@ -23,14 +25,21 @@ public class GameLogic : MonoBehaviour
             textPlayer2.text = player1.ToString();
         }
 
+        _menuManagerInstance = menuManager.GetComponent<MenuManager>();
+
         if (player1==3)
         {
-            _menuManager.OnWin(true);
+            //_menuManagerInstance.OnWin("Player 1");
+            textWinner.text = "Player 1";
+            _menuManagerInstance.OnWin();
         }
 
         if (player2 == 3)
-        {
-            _menuManager.OnWin(false);
+        {   
+            //_menuManagerInstance.OnWin("Player 2");
+            textWinner.text = "Player 2";     
+            _menuManagerInstance.OnWin();
+
         }
     }
 }
