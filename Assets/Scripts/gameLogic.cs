@@ -12,34 +12,46 @@ public class GameLogic : MonoBehaviour
     public TextMeshProUGUI textPlayer1;
     public TextMeshProUGUI textPlayer2;
     public TextMeshProUGUI textWinner;
+    public GameObject player1Object;
+    public GameObject player2Object;
+    private PlayerScript _player1Script;
+    private PlayerScript _player2Script;
 
     void OnCollisionEnter(Collision collision) {
         if( collision.gameObject.tag.Equals("player1") == true ){
             Debug.Log("player1");
             player1++;
             textPlayer1.text = player1.ToString();
+            RespawnAll();
         }
         if( collision.gameObject.tag.Equals("player2") == true ){
             Debug.Log("player2");
             player2++;
-            textPlayer2.text = player1.ToString();
+            textPlayer2.text = player2.ToString();
+            RespawnAll();
         }
 
         _menuManagerInstance = menuManager.GetComponent<MenuManager>();
 
         if (player1==3)
         {
-            //_menuManagerInstance.OnWin("Player 1");
-            textWinner.text = "Player 1";
+            textWinner.text = "Player 1 wins!";
             _menuManagerInstance.OnWin();
         }
 
-        if (player2 == 3)
+        if (player2==3)
         {   
-            //_menuManagerInstance.OnWin("Player 2");
-            textWinner.text = "Player 2";     
+            textWinner.text = "Player 2 wins!";
             _menuManagerInstance.OnWin();
 
         }
+    }
+    
+    private void RespawnAll ()
+    {
+        _player1Script = player1Object.GetComponent<PlayerScript>();
+        _player2Script = player2Object.GetComponent<PlayerScript>();
+        _player1Script.Respawn(); 
+        _player2Script.Respawn();
     }
 }

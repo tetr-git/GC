@@ -71,6 +71,11 @@ public class PlayerScript : MonoBehaviour
             transform.position = _respawnPosition;
         }
     }
+    
+    public void Respawn()
+    {
+        transform.position = _respawnPosition;
+    }
 
     private void Update()
     {

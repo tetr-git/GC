@@ -3358,6 +3358,8 @@ MonoBehaviour:
   textPlayer1: {fileID: 1387253927}
   textPlayer2: {fileID: 1664590420}
   textWinner: {fileID: 416509796}
+  player1Object: {fileID: 386426340}
+  player2Object: {fileID: 779982468}
 --- !u!1 &1822570746
 GameObject:
   m_ObjectHideFlags: 0
