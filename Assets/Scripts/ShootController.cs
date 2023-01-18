@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ShootController : MonoBehaviour
 {
+    public KeyCode shootingKey = KeyCode.C;
+    
     public GameObject bullet;
 
     public float shootspace;
@@ -22,13 +24,18 @@ public class ShootController : MonoBehaviour
     {
         shootcounter -= Time.deltaTime;
         {
-        if (Input.GetKey(KeyCode.A) && shootcounter <= 0)
-            shootcounter = shootspace;
-            GameObject bl = Instantiate(bullet, transform.position, transform.rotation);
-            Rigidbody rb = bl.GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward*shootintensity);
-            Destroy(bl, 6.0f);
-            
+            // && shootcounter <= 0
+            if (Input.GetKey(shootingKey) && shootcounter <= 0)
+            {
+
+                // PlayerOne C ---> PlayerTwo N
+                shootcounter = shootspace;
+                GameObject bl = Instantiate(bullet, transform.position, transform.rotation);
+                bl.transform.Rotate(90, 0, 0);
+                Rigidbody rb = bl.GetComponent<Rigidbody>();
+                rb.AddForce(transform.forward * shootintensity);
+                Destroy(bl, 6.0f);
+            }
         }
     }
 }

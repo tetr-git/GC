@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 307969623}
   - component: {fileID: 307969622}
   - component: {fileID: 307969621}
+  - component: {fileID: 307969624}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -355,6 +356,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307969619}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &307969624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307969619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef11306c816fdf44bced00674f51454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootingKey: 99
+  bullet: {fileID: 2268630482822534127, guid: 2a30c8d22fdf7fa4d8d8fa5578c516c2, type: 3}
+  shootspace: 0.2
+  shootintensity: 90
 --- !u!1 &346203911
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,6 +498,7 @@ GameObject:
   - component: {fileID: 386426341}
   - component: {fileID: 386426345}
   - component: {fileID: 386426346}
+  - component: {fileID: 386426347}
   m_Layer: 0
   m_Name: PlayerOne
   m_TagString: player1
@@ -607,6 +625,22 @@ MonoBehaviour:
   viewPlusKey: 101
   jumpKey: 304
   startPosition: {x: 27, y: 11, z: 27}
+--- !u!114 &386426347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386426340}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef11306c816fdf44bced00674f51454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootingKey: 99
+  bullet: {fileID: 2268630482822534127, guid: 2a30c8d22fdf7fa4d8d8fa5578c516c2, type: 3}
+  shootspace: 0.2
+  shootintensity: 90
 --- !u!1 &413377960
 GameObject:
   m_ObjectHideFlags: 0
