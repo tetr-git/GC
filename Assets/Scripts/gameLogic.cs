@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class gameLogic : MonoBehaviour
+public class GameLogic : MonoBehaviour
 {
     private MenuManager _menuManager;
     private int player1 = 0;
