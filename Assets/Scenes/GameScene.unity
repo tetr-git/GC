@@ -445,6 +445,7 @@ MonoBehaviour:
   bullet: {fileID: 2268630482822534127, guid: 2a30c8d22fdf7fa4d8d8fa5578c516c2, type: 3}
   shootspace: 1
   shootintensity: 1000
+  enemyBulletTag: Player1Bullet
 --- !u!1 &346203911
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,6 +702,7 @@ MonoBehaviour:
   viewPlusKey: 101
   jumpKey: 304
   startPosition: {x: 9, y: 10, z: 9}
+  enemyTag: Player2Bullet
 --- !u!114 &386426347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -717,6 +719,7 @@ MonoBehaviour:
   bullet: {fileID: 2268630482822534127, guid: 2a30c8d22fdf7fa4d8d8fa5578c516c2, type: 3}
   shootspace: 0.2
   shootintensity: 90
+  enemyBulletTag: Player2Bullet
 --- !u!1 &413377960
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,6 +1337,7 @@ MonoBehaviour:
   bullet: {fileID: 2268630482822534127, guid: 2a30c8d22fdf7fa4d8d8fa5578c516c2, type: 3}
   shootspace: 1
   shootintensity: 1000
+  enemyBulletTag: Player2Bullet
 --- !u!136 &666292993
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1557,7 +1561,7 @@ GameObject:
   - component: {fileID: 779982469}
   m_Layer: 0
   m_Name: PlayerTwo
-  m_TagString: Player
+  m_TagString: player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1586,6 +1590,7 @@ MonoBehaviour:
   viewPlusKey: 111
   jumpKey: 303
   startPosition: {x: -9, y: 10, z: -9}
+  enemyTag: Player1Bullet
 --- !u!54 &779982470
 Rigidbody:
   m_ObjectHideFlags: 0

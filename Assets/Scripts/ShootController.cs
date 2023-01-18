@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,14 +6,15 @@ using UnityEngine;
 public class ShootController : MonoBehaviour
 {
     public KeyCode shootingKey = KeyCode.C;
-    
+
     public GameObject bullet;
 
     public float shootspace;
     public float shootintensity;
     private float _shootcounter;
+    public String enemyBulletTag = "Player2Bullet";
     
-
+    //todo: Source
     void Update()
     {
         _shootcounter -= Time.deltaTime;
@@ -24,6 +26,7 @@ public class ShootController : MonoBehaviour
                 // PlayerOne C ---> PlayerTwo N
                 _shootcounter = shootspace;
                 GameObject bl = Instantiate(bullet, transform.position, transform.rotation);
+                bl.tag = enemyBulletTag;
                 bl.transform.Rotate(90, 0, 0);
                 Rigidbody rb = bl.GetComponent<Rigidbody>();
                 rb.AddForce(transform.forward * shootintensity);

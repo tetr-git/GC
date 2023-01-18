@@ -18,6 +18,7 @@ public class PlayerScript : MonoBehaviour
     public KeyCode viewPlusKey = KeyCode.E;
     public KeyCode jumpKey = KeyCode.LeftShift;
     public Vector3 startPosition = new Vector3(26.0f, 10.0f, 26.0f);
+    public String enemyTag = "Player2Bullet";
     
     private Rigidbody _rb;
     private Vector3 _respawnPosition;
@@ -105,6 +106,14 @@ public class PlayerScript : MonoBehaviour
             _inJumpMotion = false;
             _onGround = true;
         }
+
+        if (collision.gameObject.tag.Equals(enemyTag) == true)
+        {
+            Respawn();
+        }
+        {
+            
+        }
     }
     
     void OnCollisionExit(Collision collision) {
@@ -112,5 +121,7 @@ public class PlayerScript : MonoBehaviour
             _onGround = false;
         }
     }
+    
+    
     
 }
