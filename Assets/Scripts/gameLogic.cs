@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GameLogic : MonoBehaviour
 {
-    //private MenuManager _menuManager;
+    private MenuManager _menuManager;
     private int player1 = 0;
     private int player2 = 0;
     public TextMeshProUGUI textPlayer1;
@@ -23,8 +23,7 @@ public class GameLogic : MonoBehaviour
             textPlayer2.text = player1.ToString();
         }
 
-        /*
-         if (player1==3)
+        if (player1==3)
         {
             _menuManager.OnWin(true);
         }
@@ -33,6 +32,5 @@ public class GameLogic : MonoBehaviour
         {
             _menuManager.OnWin(false);
         }
-        */
     }
 }

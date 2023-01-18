@@ -17,6 +17,7 @@ public class PlayerScript : MonoBehaviour
     public KeyCode viewMinKey = KeyCode.Q;
     public KeyCode viewPlusKey = KeyCode.E;
     public KeyCode jumpKey = KeyCode.LeftShift;
+    public Button JumpKeyButton;
     public Vector3 startPosition = new Vector3(26.0f, 10.0f, 26.0f);
     
     private Rigidbody _rb;
@@ -24,7 +25,6 @@ public class PlayerScript : MonoBehaviour
     private Boolean _onGround = false;
     private Boolean _jumpCondition;
     private float _charger;
-    private Boolean _inJumpMotion;
    
     void Start(){
         _rb = GetComponent<Rigidbody>();
@@ -62,7 +62,6 @@ public class PlayerScript : MonoBehaviour
             jump = Vector3.up;
             Debug.Log("up");
             _jumpCondition = false;
-            _inJumpMotion = true;
             _charger = 0f;
         }
 
@@ -87,17 +86,10 @@ public class PlayerScript : MonoBehaviour
             }
             Debug.Log(_charger);
         }
-
-        if (_onGround && !_inJumpMotion)
-        {
-            _rb.velocity = Vector3.zero;
-        }
     }
 
     void OnCollisionEnter(Collision collision) {
-        if( collision.gameObject.tag.Equals("world") == true )
-        {
-            _inJumpMotion = false;
+        if( collision.gameObject.tag.Equals("world") == true ){
             _onGround = true;
         }
     }
