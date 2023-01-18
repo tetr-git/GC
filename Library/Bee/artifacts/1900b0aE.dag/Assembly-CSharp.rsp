@@ -356,7 +356,7 @@
 "Assets/Scripts/DepracMenuManager.cs"
 "Assets/Scripts/EndGameScript.cs"
 "Assets/Scripts/FollowCameraScript.cs"
-"Assets/Scripts/gameLogic.cs"
+"Assets/Scripts/GameLogic.cs"
 "Assets/Scripts/MazeGenerator.cs"
 "Assets/Scripts/MazeRenderer.cs"
 "Assets/Scripts/MenuManager.cs"

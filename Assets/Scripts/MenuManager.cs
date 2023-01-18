@@ -37,9 +37,4 @@ public class MenuManager : MonoBehaviour
         menu.SetActive(false);
         _paused = false;
     }
-    
-    public void OnWin(Boolean winner)
-    {
-        Debug.Log(winner);
-    }
 }
