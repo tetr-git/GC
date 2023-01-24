@@ -4,7 +4,7 @@
 #Unity
 #FirstSteps
 
-A simple project in Unity. A small two player game for a university course computer graphics at HTW Berlin.
+A simple project in Unity. A small two player game for a university course in computer graphics at HTW Berlin.
 
 The first player who touches the flag three times in the middle of the gamefield wins. Shooting the other player results in a respawn of the eneny player at his starting position. Restarting the game generates a new maze.
 
