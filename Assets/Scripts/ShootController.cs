@@ -1,20 +1,17 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ShootController : MonoBehaviour
 {
     public KeyCode shootingKey = KeyCode.C;
-
     public GameObject bullet;
-
     public float shootspace;
     public float shootintensity;
-    private float _shootcounter;
     public String enemyBulletTag = "Player2Bullet";
     
-    //todo: Source
+    private float _shootcounter;
+
+    //@source https://www.youtube.com/watch?v=C-yqRxmwDxg 
     void Update()
     {
         _shootcounter -= Time.deltaTime;

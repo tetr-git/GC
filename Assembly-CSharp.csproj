@@ -45,13 +45,10 @@
      <Compile Include="Assets\Scripts\MazeRenderer.cs" />
      <Compile Include="Assets\Scripts\GameLogic.cs" />
      <Compile Include="Assets\Scripts\FollowCameraScript.cs" />
+     <Compile Include="Assets\Scripts\BulletHitScript.cs" />
      <Compile Include="Assets\Scripts\ShootController.cs" />
-     <Compile Include="Assets\Scripts\DepracMenuManager.cs" />
-     <Compile Include="Assets\Scripts\EndGameScript.cs" />
      <Compile Include="Assets\Scripts\PlayerScript.cs" />
      <Compile Include="Assets\Scripts\MenuManager.cs" />
-     <Compile Include="Assets\Scripts\BulletHitScript.cs" />
-     <Folder Include="Assets" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Assets\flag\Materials" />
@@ -798,6 +795,7 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\FindTheFlag Game Unity.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

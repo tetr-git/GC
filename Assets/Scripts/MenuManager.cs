@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UIElements;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
@@ -12,35 +8,31 @@ public class MenuManager : MonoBehaviour
     public GameObject startButton;
     public GameObject quitButton;
     public GameObject restartButton;
-    private bool _paused = true;
 
     void Start()
     {
         menu.SetActive(true);
         Time.timeScale = 0;
-        restartButton.SetActive(false);
+        menuButton.SetActive(false);
     }   
 
     public void ClickStartButton()
     {   
         Time.timeScale = 1;
         menu.SetActive(false);
-        _paused = false;
+        menuButton.SetActive(true);
     }
 
     public void ClickMenuButton()
     {
         Time.timeScale = 0;
         menu.SetActive(true);
-        _paused = true;
+        menuButton.SetActive(false);
     }
 
     public void ClickRestartButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Time.timeScale = 1;
-        menu.SetActive(false);
-        _paused = false;
     }
     
     public void ClickQuitButton()

@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+//@source https://github.com/gamedolphin/youtube_unity_maze
 public class MazeRenderer : MonoBehaviour
 {
 
@@ -18,9 +17,6 @@ public class MazeRenderer : MonoBehaviour
 
     [SerializeField]
     private Transform wallPrefab = null;
-
-    [SerializeField]
-    private Transform floorPrefab = null;
 
     // Start is called before the first frame update
     void Start()
@@ -80,12 +76,6 @@ public class MazeRenderer : MonoBehaviour
             }
 
         }
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
 
     }
 }

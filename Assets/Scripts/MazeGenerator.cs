@@ -1,7 +1,7 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
-using System;
+
+//@source https://github.com/gamedolphin/youtube_unity_maze
 
 [Flags]
 public enum WallState
@@ -12,7 +12,6 @@ public enum WallState
     RIGHT = 2, // 0010
     UP = 4, // 0100
     DOWN = 8, // 1000
-
     VISITED = 128, // 1000 0000
 }
 
@@ -45,8 +44,7 @@ public static class MazeGenerator
 
     private static WallState[,] ApplyRecursiveBacktracker(WallState[,] maze, int width, int height)
     {
-        // here we make changes
-        var rng = new System.Random(/*seed*/);
+        var rng = new Random(/*seed*/);
         var positionStack = new Stack<Position>();
         var position = new Position { X = rng.Next(0, width), Y = rng.Next(0, height) };
 
@@ -144,7 +142,6 @@ public static class MazeGenerator
                 });
             }
         }
-
         return list;
     }
 
@@ -159,7 +156,6 @@ public static class MazeGenerator
                 maze[i, j] = initial;  // 1111
             }
         }
-        
         return ApplyRecursiveBacktracker(maze, width, height);
     }
 }

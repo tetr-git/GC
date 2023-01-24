@@ -1,7 +1,5 @@
-﻿using DefaultNamespace;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameLogic : MonoBehaviour
 {
@@ -43,7 +41,6 @@ public class GameLogic : MonoBehaviour
         {   
             textWinner.text = "Player 2 wins!";
             _menuManagerInstance.OnWin();
-
         }
     }
     
