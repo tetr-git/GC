@@ -97,8 +97,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
@@ -114,41 +112,41 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1592}
+      Script: {instanceID: 1590}
     - Class: 114
-      Script: {instanceID: 2208}
+      Script: {instanceID: 2206}
     - Class: 114
-      Script: {instanceID: 2334}
+      Script: {instanceID: 2332}
     - Class: 114
-      Script: {instanceID: 2640}
+      Script: {instanceID: 2638}
     - Class: 114
-      Script: {instanceID: 2750}
+      Script: {instanceID: 2748}
     - Class: 114
-      Script: {instanceID: 2868}
+      Script: {instanceID: 2866}
     - Class: 114
-      Script: {instanceID: 3166}
+      Script: {instanceID: 3164}
     - Class: 114
-      Script: {instanceID: 3492}
+      Script: {instanceID: 3490}
     - Class: 114
-      Script: {instanceID: 3744}
+      Script: {instanceID: 3742}
     - Class: 114
-      Script: {instanceID: 4226}
+      Script: {instanceID: 4224}
     - Class: 114
-      Script: {instanceID: 4502}
+      Script: {instanceID: 4500}
     - Class: 114
       Script: {instanceID: 4994}
     - Class: 114
-      Script: {instanceID: 5266}
+      Script: {instanceID: 5262}
     - Class: 114
-      Script: {instanceID: 5684}
+      Script: {instanceID: 5680}
     - Class: 114
-      Script: {instanceID: 5872}
+      Script: {instanceID: 5868}
     - Class: 114
-      Script: {instanceID: 6024}
+      Script: {instanceID: 6020}
     - Class: 114
-      Script: {instanceID: 6364}
+      Script: {instanceID: 6360}
     - Class: 114
-      Script: {instanceID: 8048}
+      Script: {instanceID: 8044}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -316,7 +314,7 @@ ScriptsOnlyBuild:
     className: UnityMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 4d9f6aebff9aec03d86d92a0a2703bfa
+      Hash: 94af8002a74cffe91317fe73d3a2f4d7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MazeRenderer
@@ -592,6 +590,12 @@ ScriptsOnlyBuild:
     className: UnityOnCancelMessageListener
   - hash:
       serializedVersion: 2
+      Hash: a233b390017d6e920d8e5772a6271e5b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BulletHitScript
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -628,7 +632,7 @@ ScriptsOnlyBuild:
     className: UnityOnEndDragMessageListener
   - hash:
       serializedVersion: 2
-      Hash: de96b6b27faa732b96310282410bd0ee
+      Hash: 17c5e687c59a4e36aed12dff6ae16c12
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShootController
@@ -650,12 +654,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: EndGameScript
   - hash:
       serializedVersion: 2
       Hash: bcaee4c2a83047257b5f47d6ed264b75
@@ -724,7 +722,7 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
-      Hash: e0594795bfa7a4f03f51c07ea27a85a2
+      Hash: c07d6389f3767cb5da4a0400705ee252
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerScript
@@ -995,4 +993,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/GameScene.unity
-  playerPath: C:/Users/tetr/Desktop/GC_1.exe
+  playerPath: C:/Users/tetr/Desktop/ComputerGraphicsCourseUnityProject/GC_1.exe
