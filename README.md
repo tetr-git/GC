@@ -1,4 +1,4 @@
-# GC
+# Project HTW Course Computer Graphics
 
 #CSharp 
 #Unity
